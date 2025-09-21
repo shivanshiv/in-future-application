@@ -1,0 +1,15 @@
+{
+  "name": "in-future-application-admin",
+  "private": true,
+  "workspaces": ["frontend", "backend"],
+  "scripts": {
+    "dev:frontend": "yarn workspace infuture-website dev",
+    "dev:backend": "yarn workspace backend dev",
+    "build:frontend": "yarn workspace infuture-website build",
+    "start:backend": "yarn workspace backend start",
+    "dev": "concurrently \"yarn run dev:backend\" \"yarn run dev:frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
