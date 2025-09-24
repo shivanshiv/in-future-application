@@ -106,19 +106,16 @@ const JobApplicationAdmin = () => {
   };
 
   const handleDownloadResume = (resumeUrl, applicantName) => {
-    // In a real application, this would trigger a download
     console.log(`Downloading resume for ${applicantName}: ${resumeUrl}`);
     alert(`Resume download would start for ${applicantName}`);
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-800">
-      {/* Background decorations */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-primary-900/20 via-transparent to-transparent"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-accent-900/20 via-transparent to-transparent"></div>
       
       <div className="flex h-screen relative z-10">
-        {/* Sidebar - Applicant List */}
         <div className="w-1/4 bg-white/[0.02] backdrop-blur-xl border-r border-white/10 overflow-y-auto">
           <div className="p-6 border-b border-white/10">
             <h1 className="text-xl font-bold text-white">Job Applications</h1>
@@ -199,10 +196,8 @@ const JobApplicationAdmin = () => {
           </div>
         </div>
 
-        {/* Main Content - Application Details */}
         <div className="flex-1 overflow-y-auto">
           <div className="p-8">
-            {/* Header */}
             <div className="bg-white/[0.02] backdrop-blur-xl border border-white/10 rounded-xl p-6 mb-6">
               <div className="flex items-center justify-between">
                 <div>
@@ -218,7 +213,6 @@ const JobApplicationAdmin = () => {
               </div>
             </div>
 
-            {/* Contact Information */}
             <div className="bg-white/[0.02] backdrop-blur-xl border border-white/10 rounded-xl p-6 mb-6">
               <h2 className="text-xl font-semibold text-white mb-4">Contact Information</h2>
               <div className="grid grid-cols-2 gap-4">
@@ -241,7 +235,6 @@ const JobApplicationAdmin = () => {
               </div>
             </div>
 
-            {/* Application Details */}
             <div className="grid grid-cols-2 gap-6 mb-6">
               <div className="bg-white/[0.02] backdrop-blur-xl border border-white/10 rounded-xl p-6">
                 <h3 className="text-lg font-semibold text-white mb-3">Experience & Salary</h3>
@@ -263,7 +256,6 @@ const JobApplicationAdmin = () => {
               </div>
             </div>
 
-            {/* Skills */}
             <div className="bg-white/[0.02] backdrop-blur-xl border border-white/10 rounded-xl p-6 mb-6">
               <h3 className="text-lg font-semibold text-white mb-3">Skills</h3>
               <div className="flex flex-wrap gap-2">
@@ -278,7 +270,6 @@ const JobApplicationAdmin = () => {
               </div>
             </div>
 
-            {/* Resume */}
             <div className="bg-white/[0.02] backdrop-blur-xl border border-white/10 rounded-xl p-6 mb-6">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center">
@@ -299,7 +290,6 @@ const JobApplicationAdmin = () => {
               </div>
             </div>
 
-            {/* Cover Letter */}
             <div className="bg-white/[0.02] backdrop-blur-xl border border-white/10 rounded-xl p-6">
               <h3 className="text-lg font-semibold text-white mb-4">Cover Letter</h3>
               <p className="text-neutral-300 leading-relaxed">{selectedApplicant.coverLetter}</p>
