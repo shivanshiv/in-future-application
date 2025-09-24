@@ -24,17 +24,6 @@ export default function Header() {
 						Login
 					</Link>
 				</div>
-						>
-							{item.label}
-						</Link>
-					))}
-					<Link 
-						to="/login" 
-						className="btn-primary ml-2"
-					>
-						Login
-					</Link>
-				</nav>
 				
 				<button 
 					className="md:hidden rounded-xl p-2 hover:bg-white/10 transition-colors duration-300" 
@@ -56,11 +45,12 @@ export default function Header() {
 					</svg>
 				</button>
 			</div>
+		</header>
 			
 			{/* Mobile menu */}
 			<div className={`md:hidden border-t border-white/10 bg-neutral-950/95 backdrop-blur-xl transition-all duration-300 ${
 				open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
-			}`}>
+			}>
 				<div className="container-xl flex flex-col gap-2 py-4">
 					{nav.slice(0, 2).map((item) => (
 						<Link 

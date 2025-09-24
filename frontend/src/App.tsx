@@ -1,23 +1,22 @@
+import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import Problems from './components/Problems';
 import Workflow from './components/Workflow';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import ApplicationsList from './components/ApplicationsList';
+import JobApplicationAdmin from './components/JobApplicationAdmin';
 
 export default function App() {
-	return (
-		<>
-			<Header />
-			<main>
-				<Hero />
-				<Problems />
-				<Workflow />
-				<ApplicationsList />
-				<Contact />
-			</main>
-			<Footer />
-		</>
-	);
-} 
+    return (
+        <>
+            <Header />
+            <main>
+                <Routes>
+                    <Route path='/' element={<Workflow />} />
+                    <Route path='/admin/applications' element={<JobApplicationAdmin />} />
+                    <Route path='/contact' element={<Contact />} />
+                </Routes>
+            </main>
+            <Footer />
+        </>
+    );
+}
